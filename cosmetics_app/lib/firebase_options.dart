@@ -41,46 +41,49 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyCEnVExM5GcOMBH3L4Txp8kmIDsVnIQmwM',
-    appId: '1:473932150734:web:e14103f6da6411ac201d9f',
-    messagingSenderId: '473932150734',
-    projectId: 'cosmetics-mobileapp',
-    authDomain: 'cosmetics-mobileapp.firebaseapp.com',
-    storageBucket: 'cosmetics-mobileapp.firebasestorage.app',
+    apiKey: 'AIzaSyDmOP_Hg8ZRR_CE36Znp46JYkg4JSy_QAY',
+    appId: '1:245127718770:web:dbd3bcbd0da7433c1adfeb',
+    messagingSenderId: '245127718770',
+    projectId: 'cosmetics-mobileapp-2c4e4',
+    authDomain: 'cosmetics-mobileapp-2c4e4.firebaseapp.com',
+    storageBucket: 'cosmetics-mobileapp-2c4e4.firebasestorage.app',
+    measurementId: 'G-VJP6VZHTYV',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyC5-Isf-LUlW6JkjZIS547HuxPzX4jCPGo',
-    appId: '1:473932150734:android:9399fc4bd278d38d201d9f',
-    messagingSenderId: '473932150734',
-    projectId: 'cosmetics-mobileapp',
-    storageBucket: 'cosmetics-mobileapp.firebasestorage.app',
+    apiKey: 'AIzaSyCytSkzztFMXZ_YGlculF0rJyeoTBQ9WaE',
+    appId: '1:245127718770:android:c89a644f6b3af44f1adfeb',
+    messagingSenderId: '245127718770',
+    projectId: 'cosmetics-mobileapp-2c4e4',
+    storageBucket: 'cosmetics-mobileapp-2c4e4.firebasestorage.app',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyCTX78cmsbJUiEMLoq7f8Dwlv5ttmqYOfY',
-    appId: '1:473932150734:ios:50f9e01aa1bca536201d9f',
-    messagingSenderId: '473932150734',
-    projectId: 'cosmetics-mobileapp',
-    storageBucket: 'cosmetics-mobileapp.firebasestorage.app',
+    apiKey: 'AIzaSyBtiujaDf--aP7kQ03q1TFe2CTcs6m9XPc',
+    appId: '1:245127718770:ios:38d46caca7a0ff331adfeb',
+    messagingSenderId: '245127718770',
+    projectId: 'cosmetics-mobileapp-2c4e4',
+    storageBucket: 'cosmetics-mobileapp-2c4e4.firebasestorage.app',
     iosBundleId: 'com.example.cosmeticsApp',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyCTX78cmsbJUiEMLoq7f8Dwlv5ttmqYOfY',
-    appId: '1:473932150734:ios:50f9e01aa1bca536201d9f',
-    messagingSenderId: '473932150734',
-    projectId: 'cosmetics-mobileapp',
-    storageBucket: 'cosmetics-mobileapp.firebasestorage.app',
+    apiKey: 'AIzaSyBtiujaDf--aP7kQ03q1TFe2CTcs6m9XPc',
+    appId: '1:245127718770:ios:38d46caca7a0ff331adfeb',
+    messagingSenderId: '245127718770',
+    projectId: 'cosmetics-mobileapp-2c4e4',
+    storageBucket: 'cosmetics-mobileapp-2c4e4.firebasestorage.app',
     iosBundleId: 'com.example.cosmeticsApp',
   );
 
   static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyCEnVExM5GcOMBH3L4Txp8kmIDsVnIQmwM',
-    appId: '1:473932150734:web:8a99f8e60bfed44f201d9f',
-    messagingSenderId: '473932150734',
-    projectId: 'cosmetics-mobileapp',
-    authDomain: 'cosmetics-mobileapp.firebaseapp.com',
-    storageBucket: 'cosmetics-mobileapp.firebasestorage.app',
+    apiKey: 'AIzaSyDmOP_Hg8ZRR_CE36Znp46JYkg4JSy_QAY',
+    appId: '1:245127718770:web:a5ff0dcd854b84181adfeb',
+    messagingSenderId: '245127718770',
+    projectId: 'cosmetics-mobileapp-2c4e4',
+    authDomain: 'cosmetics-mobileapp-2c4e4.firebaseapp.com',
+    storageBucket: 'cosmetics-mobileapp-2c4e4.firebasestorage.app',
+    measurementId: 'G-NX2ZW97PXH',
   );
+
 }
