@@ -6,6 +6,7 @@ import '../auth/login_screen.dart';
 import 'product_card.dart';
 import '../cart/cart_screen.dart'; 
 import '../orders/orders_screen.dart';
+import '../wishlist/wishlist_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -49,6 +50,15 @@ class _HomeScreenState extends State<HomeScreen> {
     Navigator.push(
       context,
       MaterialPageRoute(builder: (_) => const OrdersScreen()),
+    );
+  },
+),
+IconButton(
+  icon: const Icon(Icons.favorite, color: Colors.red),
+  onPressed: () {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (_) => const WishlistScreen()),
     );
   },
 ),

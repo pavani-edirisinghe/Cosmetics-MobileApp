@@ -80,4 +80,39 @@ class DatabaseService {
       }).toList();
     });
   }
+
+  // 5. ADD TO WISHLIST
+  Future<void> addToWishlist(String userId, Product product) async {
+    // We use .set() with the product ID so we don't get duplicates
+    await _db
+        .collection('users')
+        .doc(userId)
+        .collection('wishlist')
+        .doc(product.id)
+        .set(product.toMap());
+  }
+
+  // 6. REMOVE FROM WISHLIST
+  Future<void> removeFromWishlist(String userId, String productId) async {
+    await _db
+        .collection('users')
+        .doc(userId)
+        .collection('wishlist')
+        .doc(productId)
+        .delete();
+  }
+
+  // 7. GET MY WISHLIST
+  Stream<List<Product>> getWishlist(String userId) {
+    return _db
+        .collection('users')
+        .doc(userId)
+        .collection('wishlist')
+        .snapshots()
+        .map((snapshot) {
+      return snapshot.docs.map((doc) {
+        return Product.fromMap(doc.data(), doc.id);
+      }).toList();
+    });
+  }
 }

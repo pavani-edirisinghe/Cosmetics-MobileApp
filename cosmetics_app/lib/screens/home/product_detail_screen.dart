@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import '../../models/product_model.dart';
 import 'package:provider/provider.dart';
 import '../../providers/cart_provider.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import '../../services/database_service.dart';
 
 class ProductDetailScreen extends StatelessWidget {
   final Product product;
@@ -15,7 +17,24 @@ class ProductDetailScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
-        iconTheme: const IconThemeData(color: Colors.white), // White back arrow
+        iconTheme: const IconThemeData(color: Colors.black),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.favorite_border, color: Colors.red),
+            onPressed: () async {
+              final user = FirebaseAuth.instance.currentUser;
+              if (user != null) {
+                await DatabaseService().addToWishlist(user.uid, product);
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(
+                    content: Text("${product.name} added to Wishlist!"),
+                    backgroundColor: Colors.pink,
+                  ),
+                );
+              }
+            },
+          )
+        ],
       ),
       body: SingleChildScrollView(
         child: Column(
