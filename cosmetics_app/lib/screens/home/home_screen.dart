@@ -12,7 +12,7 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Home"),
-        backgroundColor: Colors.pinkAccent,
+        backgroundColor: Colors.pinkAccent, // Override theme for AppBar specifically if wanted
         foregroundColor: Colors.white,
         actions: [
           IconButton(
