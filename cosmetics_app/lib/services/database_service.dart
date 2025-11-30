@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import '../models/product_model.dart';
 import '../models/order_model.dart'; 
+import '../models/review_model.dart';
 
 class DatabaseService {
   final FirebaseFirestore _db = FirebaseFirestore.instance;
@@ -115,4 +116,29 @@ class DatabaseService {
       }).toList();
     });
   }
+
+  // 8. ADD REVIEW
+  Future<void> addReview(String productId, ReviewModel review) async {
+    await _db
+        .collection('products')
+        .doc(productId)
+        .collection('reviews')
+        .add(review.toMap());
+  }
+
+  // 9. GET REVIEWS FOR A PRODUCT
+  Stream<List<ReviewModel>> getProductReviews(String productId) {
+    return _db
+        .collection('products')
+        .doc(productId)
+        .collection('reviews')
+        .orderBy('date', descending: true)
+        .snapshots()
+        .map((snapshot) {
+      return snapshot.docs.map((doc) {
+        return ReviewModel.fromMap(doc.data(), doc.id);
+      }).toList();
+    });
+  }
+  
 }
