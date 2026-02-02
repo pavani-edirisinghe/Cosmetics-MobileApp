@@ -85,7 +85,7 @@ class OrdersScreen extends StatelessWidget {
                                     ? const Color.fromARGB(255, 191, 45, 45)
                                     : order.status == 'Shipped'
                                         ? const Color.fromARGB(255, 9, 49, 95)
-                                        : const Color.fromARGB(255, 23, 107, 27), // Delivered
+                                        : const Color.fromARGB(255, 21, 108, 26), // Delivered
                                 fontWeight: FontWeight.bold,
                                 fontSize: 15
                               ),
